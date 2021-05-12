@@ -37,7 +37,7 @@ public class Employee implements Serializable {
         this.congNV = congNV;
     }
 
-    public  String getId() {
+    public String getId() {
         return id;
     }
 

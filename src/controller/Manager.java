@@ -225,7 +225,7 @@ public class Manager {
     public void nhapEmail(){
         Employee employee = new Employee();
         String email;
-        System.out.println("Nhập email mới");
+        System.out.println("Nhập email :");
         do {
             email = sc.next();
             if(!CheckInput.validate(email)) System.out.println("Nhập sai định dạng email mời nhập lại");
