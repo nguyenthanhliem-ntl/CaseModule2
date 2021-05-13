@@ -48,15 +48,10 @@ public class Manager {
         System.out.println("Số điện thoại: ");
         String phone = thongtin5.nextLine();
         System.out.println("Email: ");
-        String email;
+        String email= thongtin5.nextLine();
+        System.out.println("Nhập lại email: ");
         nhapEmail();
-        do {
-            email = thongtin.next();
-            if (!checkEmail(email))
-                System.out.println("Email nhân viên đã tồn tại mời nhập lại");
-            continue;
-        } while (!checkEmail(email));
-        Employee employee = new Employee(id, name, age, address, gender, phone, email);
+        Employee employee = new Employee(id, name, age, address, gender, phone,email );
         emloyeeList.add(employee);
 
 

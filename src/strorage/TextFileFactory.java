@@ -33,7 +33,7 @@ public class TextFileFactory<E> {
 
     public ArrayList<E> readerFile(String path) {
         ArrayList<E> data = new ArrayList<>();
-        File file = new File(path);
+        File file = new File("data1.csv");
         try {
             if (file.length() > 0) {
                 FileInputStream fileInputStream = new FileInputStream(path);

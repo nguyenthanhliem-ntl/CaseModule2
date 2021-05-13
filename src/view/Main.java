@@ -7,10 +7,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner login = new Scanner(System.in);
-        System.out.println("mời bạn dăng nhập: ");
-        String login1 = login.nextLine();
-        if (login1.equals("admin")) {
+
+
             System.out.println("Xin chào");
             Manager manager = new Manager();
             Scanner cty = new Scanner(System.in);
@@ -24,7 +22,9 @@ public class Main {
                         " 6. Tìm kiếm \n" +
                         " 7. Lưu dữ liệu \n" +
                         " 8. Lấy dữ liệu \n" +
-                        " 9. Thoát ");
+                        " 9. Xem công \n" +
+                        " 10. Xem Lương \n" +
+                        " 11. Thoát ");
 
 
                 int choose = cty.nextInt();
@@ -58,35 +58,11 @@ public class Main {
                         manager.readFile();
                         break;
                     case 9:
-                        System.exit(0);
-                        break;
-                    default:
-                        System.out.println("Không có trong yêu cầu !");
-                        break;
-                }
-            }
-        } else  {
-            System.out.println("Bạn là nhân viên yêu cầu nhập id: ");
-            Manager manager = new Manager();
-            Scanner cty = new Scanner(System.in);
-            while (true) {
-                System.out.println("Mời lựa chọn: \n" +
-                        "1. Xem công \n" +
-                        "2. Xem lương \n" +
-                        "3. Thoát.");
-
-                int choose = cty.nextInt();
-
-                switch (choose) {
-                    case 1:
-                        System.out.println("Nhập id nhân viên cần xem công");
                         manager.showCong(cty.next());
                         break;
-                    case 2:
-                        System.out.println("Nhập Id để xem lương: ");
+                    case 10:
                         manager.luong(cty.next());
-                        break;
-                    case 3:
+                    case 11:
                         System.exit(0);
                         break;
                     default:
@@ -95,9 +71,9 @@ public class Main {
                 }
             }
 
-
         }
-    }}
+    }
+
 
 
 
