@@ -1,14 +1,11 @@
 package view;
 
 import controller.Manager;
-import model.Employee;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
-
             System.out.println("Xin chào");
             Manager manager = new Manager();
             Scanner cty = new Scanner(System.in);
@@ -47,6 +44,7 @@ public class Main {
                     case 5:
                         System.out.println("Mời nhập id nhân viên cần quản lý");
                         manager.timeSheet(cty.next());
+                        break;
                     case 6:
                         System.out.println("Nhập id cần tìm: ");
                         manager.findEmployee(cty.next());
@@ -58,10 +56,13 @@ public class Main {
                         manager.readFile();
                         break;
                     case 9:
+                        System.out.println("Nhập id: ");
                         manager.showCong(cty.next());
                         break;
                     case 10:
+                        System.out.println("Nhập id: ");
                         manager.luong(cty.next());
+                        break;
                     case 11:
                         System.exit(0);
                         break;
